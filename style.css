@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+/* DARK THEME (default) */
+body.dark {
+    background: linear-gradient(135deg, #2c2c2c, #3a3a3a, #555555);
+}
+
+/* LIGHT THEME */
+body.light {
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5, #ffffff);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-card {
+    position: relative;
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+}
+
+/* Light glass card */
+body.light .glass-card {
+    background: rgba(255,255,255,0.6);
+    color: #222;
+}
+
+.glass-card h2 {
+    margin-bottom: 20px;
+}
+
+.glass-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* Light inputs */
+body.light input {
+    background: rgba(0,0,0,0.1);
+    color: #222;
+}
+
+.glass-card input::placeholder {
+    color: #ddd;
+}
+
+body.light input::placeholder {
+    color: #555;
+}
+
+.glass-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#8a8a8a,#c0c0c0);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Light button */
+body.light button {
+    background: linear-gradient(135deg,#bbb,#eee);
+}
+
+.glass-card span {
+    color: #ccc;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.glass-card span:hover {
+    color: white;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
