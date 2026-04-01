@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glass Login</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Auth</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
-    <div class="glass-card">
+<div class="app auth">
+  <h1 id="formTitle">Login</h1>
 
-        <!-- Theme Toggle -->
-        <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
 
-        <h2 id="title">Login</h2>
+  <button onclick="handleAuth()">Login</button>
 
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-
-        <button onclick="login()">Login</button>
-
-        <p>
-            Don't have an account?
-            <span onclick="toggleForm()">Register</span>
-        </p>
-    </div>
+  <p onclick="toggleMode()" class="switch">
+    Don't have an account? Register
+  </p>
 </div>
 
-<script src="script.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
